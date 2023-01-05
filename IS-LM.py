@@ -89,7 +89,7 @@ lines = [liney1, liney3, liney5, linei3, linei4]
 # Add sliders axes
 sliders_axes = []
 for i in range(8):
-    sliders_axes.append(plt.axes([0.55, 0.85 - i*0.24/8, 0.32, 0.25/8]))
+    sliders_axes.append(plt.axes([0.55, 0.85 - i*0.25/8, 0.32, 0.225/8]))
 
 # Function to update graph every time a slider is changed
 def update(val):
@@ -214,6 +214,10 @@ ax7.axis('off')
 
 labelBars(ax6, bi)
 labelBars(ax7, by)
+
+for ax in [ax1, ax2, ax3, ax4, ax5, ax6, ax7]:
+    ax.tick_params(direction='in', length=3, width=0.5, colors='k',
+                grid_color='r', grid_alpha=1)
 
 figman = plt.get_current_fig_manager()
 figman.resize(1200, 650)
