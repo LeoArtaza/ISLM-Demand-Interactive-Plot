@@ -215,6 +215,10 @@ ax7.axis('off')
 labelBars(ax6, bi)
 labelBars(ax7, by)
 
+for ax in [ax1, ax2, ax3, ax4, ax5, ax6, ax7]:
+    ax.tick_params(direction='in', length=3, width=0.5, colors='k',
+                grid_color='r', grid_alpha=1)
+
 figman = plt.get_current_fig_manager()
 figman.resize(1200, 650)
 figman.set_window_title('IS-LM: Aggregate Demand')
