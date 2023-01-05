@@ -89,7 +89,7 @@ lines = [liney1, liney3, liney5, linei3, linei4]
 # Add sliders axes
 sliders_axes = []
 for i in range(8):
-    sliders_axes.append(plt.axes([0.55, 0.85 - i*0.24/8, 0.32, 0.25/8]))
+    sliders_axes.append(plt.axes([0.55, 0.85 - i*0.25/8, 0.32, 0.225/8]))
 
 # Function to update graph every time a slider is changed
 def update(val):
